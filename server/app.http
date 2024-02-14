@@ -1,0 +1,160 @@
+Get http://localhost:4444/auth
+
+###
+
+POST http://localhost:4444/auth/signup
+Content-Type: application/json
+
+{
+    "name" : "reddy",
+    "email" : "reddy@gmail.com",
+    "phoneNumber" : "9999999999",
+    "gender" : "Male",
+    "password" : "reddy@123"
+}
+
+###
+POST  http://localhost:4444/auth/login
+Content-Type: application/json
+
+{
+    "email" : "karthik@gmail.com",
+    "password" : "karthik@123"
+}
+
+###
+GET http://localhost:4444/auth/profile
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1NDllMzVmYTNhMDViZTQ0ZWE3ZjcyNSIsImlhdCI6MTcwMTI0OTcwMiwiZXhwIjoxNzAxMjY3NzAyfQ.n2oi2nUZ6qtNhRId2IuSsxYNwZaiAEBNP3tXUMhDjb4
+
+###
+POST  http://localhost:4444/api/addpatient
+Content-Type: application/json
+
+{
+    "name" : "rohit",
+    "email" : "rohit@gmail.com",
+    "password" : "123456",
+    "gender" : "male",
+    "phone" : "8090906780",
+    "address" : "mumbail",
+    "dateOfBirth" : "1990",
+    "age" : "34",
+    "bloodGroup" : "B+"
+}
+
+###
+
+GET  http://localhost:4444/api/patient
+Content-Type: application/json
+
+###
+GET http://localhost:4444/api/patient/65609d2039161e8bff50ca84
+Content-Type: application/json
+
+###
+PUT  http://localhost:4444/api/patient/65609d2039161e8bff50ca84
+Content-Type: application/json
+
+{
+    "name" : "rohit SHARMA",
+    "email" : "rohit@gmail.com",
+    "password" : "123456",
+    "gender" : "male",
+    "phone" : "8090906780",
+    "address" : "mumbail",
+    "dateOfBirth" : "1990",
+    "age" : "100",
+    "bloodGroup" : "B+"
+}
+
+###
+DELETE  http://localhost:4444/api/patient/65609d2039161e8bff50ca84
+Content-Type: application/json
+
+###
+POST  http://localhost:4444/api/addprescription
+Content-Type: application/json
+
+{
+    "date" : "1-1-2023",
+    "time" : "3:00",
+    "patient" : "karthik",
+    "caseHistory" : "surgery",
+    "medication" : "tablets",
+    "note" : "needs Full rest"
+}
+
+###
+GET  http://localhost:4444/api/prescription
+
+###
+PUT  http://localhost:4444/api/prescription/656457640520dcc7f0e79073
+Content-Type: application/json
+
+{
+    "caseHistory" : "kidney issue"
+}
+
+###
+DELETE  http://localhost:4444/api/prescription/656457640520dcc7f0e79073
+
+###
+GET  http://localhost:4444/api/doctor/6549e35fa3a05be44ea7f725
+
+###
+POST  http://localhost:4444/api/bed_allotment
+Content-Type: application/json
+
+{
+    "bedNumber" : "1-1-2023",
+    "patient" : "3:00",
+    "allotmentTime" : "karthik",
+    "dischargeTime" : "surgery"
+}
+
+###
+GET  http://localhost:4444/api/bed_allotment
+
+###
+GET  http://localhost:4444/api/bed_allotment/6568268e2261ad3d190fe0c4
+
+###
+PUT  http://localhost:4444/api/bed_allotment/6568268e2261ad3d190fe0c4
+Content-Type: application/json
+
+{
+    "patient" : "kidney "
+}
+
+###
+DELETE http://localhost:4444/api/bed_allotment/6568268e2261ad3d190fe0c4
+
+###
+POST  http://localhost:4444/api/appointment
+Content-Type: application/json
+
+{
+    "name" : "oye 100",
+    "email" : "oye@gmail.com",
+    "phone" : "78787878788",
+    "date" : "1-1-2023",
+    "time" : "9:00"
+}
+
+###
+GET  http://localhost:4444/api/appointment
+
+###
+GET  http://localhost:4444/api/appointment/6568903b6ac0bcf97e0a2b08
+
+###
+PUT  http://localhost:4444/api/appointment/6568903b6ac0bcf97e0a2b08
+Content-Type: application/json
+
+{
+    "name" : "lakhs",
+    "email" : "zero"
+}
+
+###
+DELETE   http://localhost:4444/api/appointment/6568903b6ac0bcf97e0a2b08
